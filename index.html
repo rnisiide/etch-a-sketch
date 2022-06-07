@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-sketch</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Sketchpad!</h1>
+    </div>
+
+    
+        <div class="instructions">
+
+            <div>
+                <p>Pick canvas size:</p>
+                <button id="small">Small</button>
+                <button id="medium">Medium</button>
+                <button id="large">Large</button>
+            </div>
+
+            <div class="input">
+                <p>Choose ammount of lines and rows (from 2 to 100)</p>
+                <input 
+                id ="userInput"
+                type="text" 
+                placeholder="Size of grid"                
+                >
+                <!--<button onclick="returnValue()">Generate Pixels!</button>
+                    Will keep this button deactivated for now-->
+                
+            </div>
+
+            <div> 
+                <p>Choose background color:</p>
+                <button id="backblack" class="black">Black</button>                
+                <button id="backwhite" class="white">White</button>
+                <button id="backorange" class="orange"> Orange</button>
+                <button id="backred" class="red"> Red</button>
+                <button id="backyellow" class="yellow"> Yellow</button>
+                <button id="backgreen" class="green"> Green</button>
+                <button id="backblue" class="blue">Blue</button>
+                <button id="backrandom" class="random">Random</button>
+             
+                
+
+            </div>
+
+            
+
+            <div class="buttons">
+                <p>Mouse color</p>
+                <button id="black" class="black">Black</button>                
+                <button id="white" class="white">White</button>
+                <button id="orange" class="orange"> Orange</button>
+                <button id="red" class="red"> Red</button>
+                <button id="yellow" class="yellow"> Yellow</button>
+                <button id="green" class="green"> Green</button>
+                <button id="blue" class="blue">Blue</button>
+                <button id="random" class="random">Random</button>
+             </div>     
+        </div>
+  
+        
+    <div class="wrapper">
+        <div class="board">
+        </div>
+    </div>
+       
+        
+
+        
+    
+    <script src="script.js"></script>
+</body>
+</html>

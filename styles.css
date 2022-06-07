@@ -1,0 +1,37 @@
+.board {
+    width: 500px;
+    height: 500px;
+    border-style: solid;
+    display: grid;
+    justify-content: center;
+    
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-style: dotted;
+    border-color: pink;
+}
+
+.buttons {
+    border-style: dotted;
+    text-align: center;
+}
+
+.input {
+    margin: 10px
+}
+
+.header {
+    border-style: dotted;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: yellow;
+}
