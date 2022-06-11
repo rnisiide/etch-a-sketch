@@ -9,71 +9,58 @@
 </head>
 <body>
     <div class="header">
-        <h1>Sketchpad!</h1>
+        <h1>Etch a Sketch!</h1>
     </div>
-
     
-        <div class="instructions">
+    <div id="wrapper">
 
-            <div>
-                <p>Pick canvas size:</p>
-                <button id="small">Small</button>
-                <button id="medium">Medium</button>
-                <button id="large">Large</button>
+        <div class="choices">
+        
+            <div class="instwrapper">                
+                <h3>Canvas size</h3>
+                <div class="slide container">
+                    <input type="range" min="200" max="505" class="range" id="myCanvas"></div>
             </div>
 
-            <div class="input">
-                <p>Choose ammount of lines and rows (from 2 to 100)</p>
-                <input 
-                id ="userInput"
-                type="text" 
-                placeholder="Size of grid"                
-                >
-                <!--<button onclick="returnValue()">Generate Pixels!</button>
-                    Will keep this button deactivated for now-->
-                
-            </div>
+            <div class="instwrapper">
+                <h3>Pixel density</h3>
+                <div class="slide container">
+                    <input type="range" min="2" max="80" class="range" id="myRange"></div>
+            </div>     
+        
+            <div class="instwrapper">
+                <h3> Background color</h3>
+                <div class="color container" >
+                    <div id="backColor">
+                        <input type="color" class="backgroundInput"></div> 
+            </div></div>
 
-            <div> 
-                <p>Choose background color:</p>
-                <button id="backblack" class="black">Black</button>                
-                <button id="backwhite" class="white">White</button>
-                <button id="backorange" class="orange"> Orange</button>
-                <button id="backred" class="red"> Red</button>
-                <button id="backyellow" class="yellow"> Yellow</button>
-                <button id="backgreen" class="green"> Green</button>
-                <button id="backblue" class="blue">Blue</button>
-                <button id="backrandom" class="random">Random</button>
-             
-                
+            <div class="instwrapper">
+                <h3> Mouse color</h3> 
+                <div class="color container">
+                    <div id="mouseColor">             
+                <input type="color" class="mouseInput"></div>               
+            </div></div>
 
-            </div>
-
-            
-
-            <div class="buttons">
-                <p>Mouse color</p>
-                <button id="black" class="black">Black</button>                
-                <button id="white" class="white">White</button>
-                <button id="orange" class="orange"> Orange</button>
-                <button id="red" class="red"> Red</button>
-                <button id="yellow" class="yellow"> Yellow</button>
-                <button id="green" class="green"> Green</button>
-                <button id="blue" class="blue">Blue</button>
-                <button id="random" class="random">Random</button>
-             </div>     
+            <div class="instwrapper" id="containerColor">
+            <h3 class="switchtitle">Rainbow Mouse</h3>
+            <div class="switcher container">                                        
+                <label class="switch">
+                <input type="checkbox" id="rainbow">
+                <span class="slider round"></span></label>
+            </div></div>
+        
+      
         </div>
-  
-        
-    <div class="wrapper">
-        <div class="board">
-        </div>
-    </div>
-       
-        
+                       
+    <div>
+        <div class="board"></div>
+    </div>    
 
-        
-    
+    </div>  
+
+    <div id="footer">Built and designed by <a href="https://github.com/rnisiide"> Ricardo Nisiide</a> | <a href="https://github.com/rnisiide/etch-a-sketch">Github Source</a></div> 
+
     <script src="script.js"></script>
 </body>
 </html>

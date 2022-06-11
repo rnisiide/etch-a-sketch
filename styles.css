@@ -1,37 +1,236 @@
-.board {
-    width: 500px;
-    height: 500px;
-    border-style: solid;
-    display: grid;
-    justify-content: center;
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    border-style: dotted;
-    border-color: pink;
-}
-
-.buttons {
-    border-style: dotted;
+h3 {
     text-align: center;
 }
 
-.input {
-    margin: 10px
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(200, 200, 200);
+}
+
+.board {
+    width: 505px;
+    height: 505px;
+    border-style: solid;
+    display: grid;
+    margin-top: 10px;
 }
 
 .header {
-    border-style: dotted;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: yellow;
 }
 
-.instructions {
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#colors, .instwrapper, .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choices {
+    display: flex;
+    background-color: rgb(247, 49, 171);
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    width: auto;
+    flex-wrap: wrap;
+    
+    
+}
+
+.instwrapper {
+    flex-shrink: 1;
+}
+
+#colors {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border-style: solid;
-    border-color: yellow;
+}
+
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+}
+
+input[type='color'] {
+    opacity: 0;
+    display: block;
+    width: 70px;
+    height: 40px;
+    border: none;
+}
+
+#backColor, #mouseColor {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    border-radius: 35px;    
+    border: solid;
+    border-color:black;
+}
+
+#backColor {
+    background-color: rgb(200, 200, 200);
+}
+
+#mouseColor {
+    background-color: black;
+}
+
+.mouseInput, .backgroundInput {
+    padding: 0px; 
+    border-radius: 30px;
+    border: none;
+}
+
+input[type="range"] {
+    accent-color: black;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.container {
+    width: 150px;
+    height: 30px;
+}
+
+.switcher {
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(29, 29, 29);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background: linear-gradient(
+        45deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%)
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#footer {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+a, a:visited {
+    color: black
+
+}
+
+@media (min-width: 830px) {
+    #wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .choices {
+        display: flex;
+        background-color: rgb(247, 49, 171);
+        border-radius: 10px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px;
+        width: 150px;
+        height: 500px;
+        margin-left: 200px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    .board {
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+
+    
+    #backColor, #mouseColor {
+    width: 70px;
+    height: 40px;
+    border-radius: 35px;    
+    } 
+}
+
+@media (min-width: 1100px) {
+    .choices {
+        margin-left: 320px;
+    }
+
 }
